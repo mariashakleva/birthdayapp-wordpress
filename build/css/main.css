@@ -1,0 +1,410 @@
+/* 
+Theme name: Birthday App
+Author: Marija Shakleva
+*/
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes squeeze-in {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1); }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1); }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1); }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1); }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1); }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes squeeze-in {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1); }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1); }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1); }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1); }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1); }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+@-webkit-keyframes entrance {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
+    opacity: 1; } }
+
+@keyframes entrance {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
+    opacity: 1; } }
+
+.frame {
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px; }
+
+.yellow-bg {
+  background: #ffe666; }
+
+.blue-bg {
+  background: #5aaaf2; }
+
+.wp-core-ui .button-primary {
+  background: #ffe666;
+  border-color: transparent;
+  box-shadow: 1.5px 1.5px 0px #fad63e;
+  color: #fff;
+  text-shadow: none;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  -moz-transition: box-shadow 0.2s ease-in-out;
+  -o-transition: box-shadow 0.2s ease-in-out;
+  -webkit-transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out; }
+  .wp-core-ui .button-primary:hover, .wp-core-ui .button-primary:active, .wp-core-ui .button-primary:focus {
+    background: #ffe666;
+    box-shadow: 3px 3px 0px #fad63e; }
+
+input[type=checkbox],
+input[type=radio] {
+  border-radius: 50%;
+  border: none;
+  background-attachment: #f7f7f7;
+  box-shadow: none;
+  -moz-transition: box-shadow 0.2s ease-in-out;
+  -o-transition: box-shadow 0.2s ease-in-out;
+  -webkit-transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out; }
+  input[type=checkbox]:focus,
+  input[type=radio]:focus {
+    box-shadow: 2px 2px 0px #eaeaea;
+    border: none; }
+
+.widefat tfoot td input[type=checkbox]:before,
+.widefat th input[type=checkbox]:before,
+.widefat thead td input[type=checkbox]:before,
+input[type=checkbox]:checked:before {
+  color: #5aaaf2; }
+
+body,
+p,
+h1,
+h2,
+h4,
+h5,
+h6,
+a,
+span,
+textarea,
+input,
+button {
+  font-family: 'Varela Round', sans-serif; }
+
+body.login {
+  background: #5aaaf2 !important; }
+  body.login div#login {
+    -webkit-animation: entrance 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -moz-animation: entrance 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -ms-animation: entrance 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -o-animation: entrance 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: entrance 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    width: 400px;
+    background: white;
+    padding: 3% 3% 3% 3%;
+    border-radius: 30px;
+    position: relative;
+    top: 10%;
+    box-shadow: 10px 10px 0px #429ee2;
+    -moz-transition: box-shadow 0.2s ease-in-out;
+    -o-transition: box-shadow 0.2s ease-in-out;
+    -webkit-transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out; }
+    body.login div#login:hover {
+      box-shadow: 15px 15px 0px #429ee2; }
+    body.login div#login #backtoblog a:hover,
+    body.login div#login #nav a:hover,
+    body.login div#login h1 a:hover,
+    body.login div#login #backtoblog a:focus,
+    body.login div#login #nav a:focus,
+    body.login div#login h1 a:focus {
+      color: #5aaaf2;
+      outline: none; }
+    body.login div#login #login_error,
+    body.login div#login .message,
+    body.login div#login .success {
+      border-left: none;
+      border-radius: 20px;
+      background: #fafafa;
+      box-shadow: 2px 2px 0px #5aaaf2;
+      text-align: center;
+      color: #429ee2;
+      font-weight: 600; }
+    body.login div#login h1 a {
+      margin-bottom: 0px !important;
+      height: 200px;
+      width: 200px;
+      background-size: 200px 200px;
+      background-repeat: no-repeat;
+      padding-bottom: 0px;
+      -webkit-animation: squeeze-in 0.9s 1.1s both;
+      -moz-animation: squeeze-in 0.9s 1.1s both;
+      -ms-animation: squeeze-in 0.9s 1.1s both;
+      -o-animation: squeeze-in 0.9s 1.1s both;
+      animation: squeeze-in 0.9s 1.1s both; }
+    body.login div#login form#loginform,
+    body.login div#login form#lostpasswordform,
+    body.login div#login form#registerform {
+      margin-top: 0px;
+      padding: 0px 40px;
+      margin-bottom: 10%;
+      box-shadow: none;
+      overflow: visible; }
+      body.login div#login form#loginform p,
+      body.login div#login form#lostpasswordform p,
+      body.login div#login form#registerform p {
+        text-align: center; }
+      body.login div#login form#loginform input.input,
+      body.login div#login form#loginform input#user_login,
+      body.login div#login form#lostpasswordform input.input,
+      body.login div#login form#lostpasswordform input#user_login,
+      body.login div#login form#registerform input.input,
+      body.login div#login form#registerform input#user_login {
+        background: #f7f7f7;
+        border: none;
+        border-radius: 20px;
+        padding: 12px 10px;
+        font-size: 14px;
+        color: #333;
+        box-shadow: none;
+        text-align: center;
+        -moz-transition: box-shadow 0.2s ease-in-out;
+        -o-transition: box-shadow 0.2s ease-in-out;
+        -webkit-transition: box-shadow 0.2s ease-in-out;
+        transition: box-shadow 0.2s ease-in-out; }
+        body.login div#login form#loginform input.input:focus,
+        body.login div#login form#loginform input#user_login:focus,
+        body.login div#login form#lostpasswordform input.input:focus,
+        body.login div#login form#lostpasswordform input#user_login:focus,
+        body.login div#login form#registerform input.input:focus,
+        body.login div#login form#registerform input#user_login:focus {
+          box-shadow: 2px 2px 0px #eaeaea;
+          border: none; }
+    body.login div#login p#nav,
+    body.login div#login p#backtoblog {
+      text-align: center; }
+
+.birthday-front-page {
+  background: #f7f7f7; }
+  .birthday-front-page .banner {
+    background: #5aaaf2;
+    box-shadow: 0px 7px 0px #429ee2; }
+  .birthday-front-page .birthday-slogan {
+    position: relative;
+    color: white;
+    font-size: 20px;
+    font-weight: bold; }
+  .birthday-front-page .banner-logo {
+    width: 80px; }
+  .birthday-front-page .birthday-confetti {
+    position: relative;
+    width: 100%;
+    height: 85px;
+    overflow: hidden; }
+  .birthday-front-page .confetta {
+    position: absolute;
+    width: 10px;
+    height: 17px;
+    background: #f7f7f7;
+    border-radius: 50%;
+    top: 0;
+    opacity: 0; }
+    .birthday-front-page .confetta:nth-child(1) {
+      left: 7%;
+      transform: rotate(-48deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 86ms;
+      animation-duration: 399ms; }
+    .birthday-front-page .confetta:nth-child(2) {
+      left: 14%;
+      transform: rotate(-49deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 265ms;
+      animation-duration: 579ms; }
+    .birthday-front-page .confetta:nth-child(3) {
+      left: 21%;
+      transform: rotate(47deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 255ms;
+      animation-duration: 538ms; }
+    .birthday-front-page .confetta:nth-child(4) {
+      left: 28%;
+      transform: rotate(47deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 22ms;
+      animation-duration: 645ms; }
+    .birthday-front-page .confetta:nth-child(5) {
+      left: 35%;
+      transform: rotate(7deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 254ms;
+      animation-duration: 463ms; }
+    .birthday-front-page .confetta:nth-child(6) {
+      left: 42%;
+      transform: rotate(62deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 15ms;
+      animation-duration: 551ms; }
+    .birthday-front-page .confetta:nth-child(7) {
+      left: 49%;
+      transform: rotate(-50deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 247ms;
+      animation-duration: 499ms; }
+    .birthday-front-page .confetta:nth-child(8) {
+      left: 56%;
+      transform: rotate(60deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 107ms;
+      animation-duration: 475ms; }
+    .birthday-front-page .confetta:nth-child(9) {
+      left: 63%;
+      transform: rotate(-69deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 207ms;
+      animation-duration: 533ms; }
+    .birthday-front-page .confetta:nth-child(10) {
+      left: 70%;
+      transform: rotate(-75deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 169ms;
+      animation-duration: 483ms; }
+    .birthday-front-page .confetta:nth-child(11) {
+      left: 77%;
+      transform: rotate(60deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 253ms;
+      animation-duration: 402ms; }
+    .birthday-front-page .confetta:nth-child(12) {
+      left: 84%;
+      transform: rotate(50deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 111ms;
+      animation-duration: 629ms; }
+    .birthday-front-page .confetta:nth-child(13) {
+      left: 91%;
+      transform: rotate(-50deg);
+      animation: falling 550ms infinite ease-out;
+      animation: falling 550ms infinite ease-out;
+      animation-delay: 167ms;
+      animation-duration: 545ms; }
+    .birthday-front-page .confetta:nth-child(odd) {
+      background: white; }
+    .birthday-front-page .confetta:nth-child(even) {
+      z-index: 1; }
+    .birthday-front-page .confetta:nth-child(4n) {
+      width: 7px;
+      height: 14px;
+      animation-duration: 1100ms; }
+    .birthday-front-page .confetta:nth-child(3n) {
+      width: 8.5px;
+      height: 15.5px;
+      animation-duration: 1375ms;
+      animation-delay: 550ms; }
+    .birthday-front-page .confetta:nth-child(4n-7) {
+      background: pink; }
+
+@keyframes falling {
+  from {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  to {
+    transform: translateY(85px); } }
+  .birthday-front-page .birthday-list {
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background: white;
+    padding: 1%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0px #eaeaea;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    -moz-transition: box-shadow 0.2s ease-in-out;
+    -o-transition: box-shadow 0.2s ease-in-out;
+    -webkit-transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out; }
+    .birthday-front-page .birthday-list:hover {
+      box-shadow: 10px 10px 0px #eaeaea; }
+    .birthday-front-page .birthday-list .info-text {
+      color: #555;
+      position: relative;
+      top: 15px; }
+
+@media screen and (min-width: 756px) {
+  .birthday-list {
+    width: 700px; } }

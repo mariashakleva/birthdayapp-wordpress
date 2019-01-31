@@ -1,0 +1,498 @@
+/* 
+Theme name: Birthday App
+Author: Marija Shakleva
+*/
+
+// font
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+// colors
+
+$brandColor : #5aaaf2;
+$brandColorDark : #429ee2;
+$yellow : #ffe666;
+$yellowDark : #fad63e;
+$lightGrey: #f7f7f7;
+$shadowGrey: #eaeaea;
+
+// animations
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes squeeze-in {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes squeeze-in {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+@-webkit-keyframes entrance {
+    0% {
+        -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+        transform: translateY(-600px) rotateX(-30deg) scale(0);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0) rotateX(0) scale(1);
+        transform: translateY(0) rotateX(0) scale(1);
+        -webkit-transform-origin: 50% 1400px;
+        transform-origin: 50% 1400px;
+        opacity: 1;
+    }
+}
+
+@keyframes entrance {
+    0% {
+        -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+        transform: translateY(-600px) rotateX(-30deg) scale(0);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0) rotateX(0) scale(1);
+        transform: translateY(0) rotateX(0) scale(1);
+        -webkit-transform-origin: 50% 1400px;
+        transform-origin: 50% 1400px;
+        opacity: 1;
+    }
+}
+
+
+// transitions
+
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transition-property($property...) {
+    -moz-transition-property: $property;
+    -o-transition-property: $property;
+    -webkit-transition-property: $property;
+    transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+    -moz-transition-property: $duration;
+    -o-transition-property: $duration;
+    -webkit-transition-property: $duration;
+    transition-property: $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function: $timing;
+    -o-transition-timing-function: $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay...) {
+    -moz-transition-delay: $delay;
+    -o-transition-delay: $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+// general
+
+.frame {
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+}
+
+.yellow-bg {
+    background: $yellow;
+}
+
+.blue-bg {
+    background: $brandColor;
+}
+
+.wp-core-ui .button-primary {
+    background: $yellow;
+    border-color: transparent;
+    box-shadow: 1.5px 1.5px 0px $yellowDark;
+    color: #fff;
+    text-shadow: none;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    @include transition(box-shadow .2s ease-in-out);
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: $yellow;
+        box-shadow: 3px 3px 0px $yellowDark;
+    }
+}
+
+input[type=checkbox],
+input[type=radio] {
+    border-radius: 50%;
+    border: none;
+    background-attachment: $lightGrey;
+    box-shadow: none;
+    @include transition(box-shadow .2s ease-in-out);
+
+    &:focus {
+        box-shadow: 2px 2px 0px $shadowGrey;
+        border: none;
+    }
+}
+
+.widefat tfoot td input[type=checkbox]:before,
+.widefat th input[type=checkbox]:before,
+.widefat thead td input[type=checkbox]:before,
+input[type=checkbox]:checked:before {
+    color: $brandColor;
+}
+
+body,
+p,
+h1,
+h2,
+h4,
+h5,
+h6,
+a,
+span,
+textarea,
+input,
+button {
+    font-family: 'Varela Round', sans-serif;
+}
+
+// login page(s)
+
+body.login {
+    background: $brandColor !important;
+
+    div#login {
+        -webkit-animation: entrance 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        -moz-animation: entrance 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        -ms-animation: entrance 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        -o-animation: entrance 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: entrance 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        width: 400px;
+        background: white;
+        padding: 3% 3% 3% 3%;
+        border-radius: 30px;
+        position: relative;
+        top: 10%;
+        box-shadow: 10px 10px 0px $brandColorDark;
+        @include transition(box-shadow .2s ease-in-out);
+
+        &:hover {
+            box-shadow: 15px 15px 0px $brandColorDark;
+        }
+
+        #backtoblog a:hover,
+        #nav a:hover,
+        h1 a:hover,
+        #backtoblog a:focus,
+        #nav a:focus,
+        h1 a:focus {
+            color: $brandColor;
+            outline: none;
+        }
+
+        #login_error,
+        .message,
+        .success {
+            border-left: none;
+            border-radius: 20px;
+            background: #fafafa;
+            box-shadow: 2px 2px 0px $brandColor;
+            text-align: center;
+            color: $brandColorDark;
+            font-weight: 600;
+        }
+
+        h1 a {
+            margin-bottom: 0px !important;
+            height: 200px;
+            width: 200px;
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            padding-bottom: 0px;
+            -webkit-animation: squeeze-in 0.9s 1.1s both;
+            -moz-animation: squeeze-in 0.9s 1.1s both;
+            -ms-animation: squeeze-in 0.9s 1.1s both;
+            -o-animation: squeeze-in 0.9s 1.1s both;
+            animation: squeeze-in 0.9s 1.1s both;
+        }
+
+        form#loginform,
+        form#lostpasswordform,
+        form#registerform {
+            margin-top: 0px;
+            padding: 0px 40px;
+            margin-bottom: 10%;
+            box-shadow: none;
+            overflow: visible;
+
+            p {
+                text-align: center;
+            }
+
+            input.input,
+            input#user_login {
+                background: $lightGrey;
+                border: none;
+                border-radius: 20px;
+                padding: 12px 10px;
+                font-size: 14px;
+                color: #333;
+                box-shadow: none;
+                text-align: center;
+                @include transition(box-shadow .2s ease-in-out);
+
+                &:focus {
+                    box-shadow: 2px 2px 0px $shadowGrey;
+                    border: none;
+                }
+            }
+        }
+
+        p#nav,
+        p#backtoblog {
+            text-align: center;
+        }
+    }
+}
+
+// login page(s) end
+
+// front page start
+
+.birthday-front-page {
+
+    background: $lightGrey;
+
+    .banner {
+        background: $brandColor;
+        box-shadow: 0px 7px 0px $brandColorDark;
+    }
+
+    // confetti
+
+    $duration: 550;
+
+    @function randomNum($min, $max) {
+        $rand: random();
+        $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+        @return $randomNum;
+    }
+
+    .birthday-slogan {
+        position: relative;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .banner-logo {
+        width: 80px;
+    }
+
+    .birthday-confetti {
+        position: relative;
+        width: 100%;
+        height: 85px;
+        overflow: hidden;
+    }
+
+    .confetta {
+        position: absolute;
+        width: 10px;
+        height: 17px;
+        background: $lightGrey;
+        border-radius: 50%;
+        top: 0;
+        opacity: 0;
+
+        @for $i from 1 through 13 {
+            &:nth-child(#{$i}) {
+                left: $i * 7%;
+                transform: rotate(#{randomNum(-80, 80)}deg);
+                animation: falling $duration * 1ms infinite ease-out;
+                animation: falling $duration * 1ms infinite ease-out;
+                animation-delay: #{randomNum(0, $duration * .5)}ms;
+                animation-duration: #{randomNum($duration * .7, $duration * 1.2)}ms
+            }
+        }
+
+        &:nth-child(odd) {
+            background: white;
+        }
+
+        &:nth-child(even) {
+            z-index: 1;
+        }
+
+        &:nth-child(4n) {
+            width: 7px;
+            height: 14px;
+            animation-duration: $duration * 2ms;
+        }
+
+        &:nth-child(3n) {
+            width: 8.5px;
+            height: 15.5px;
+            animation-duration: $duration * 2.5ms;
+            animation-delay: $duration * 1ms;
+        }
+
+        &:nth-child(4n-7) {
+            background: pink;
+        }
+    }
+
+    @keyframes falling {
+        from {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        to {
+            transform: translateY(85px);
+        }
+    }
+
+    .birthday-list {
+        margin: 0 auto;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        background: white;
+        padding: 1%;
+        border-radius: 20px;
+        box-shadow: 5px 5px 0px $shadowGrey;
+        -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        @include transition(box-shadow .2s ease-in-out);
+
+        &:hover {
+            box-shadow: 10px 10px 0px $shadowGrey;
+        }
+
+        .info-text {
+            color: #555;
+            position: relative;
+            top: 15px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 756px) {
+    .birthday-list {
+        width: 700px;
+    }
+}
+
+
+
+// confetti end
+
+// front page end

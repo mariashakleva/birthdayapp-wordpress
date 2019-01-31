@@ -1,0 +1,17 @@
+{
+  "name": "birthdayapp",
+  "version": "1.0.0",
+  "description": "Wordpress theme for listing users' birthdays",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^4.3.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marija Shakleva",
+  "license": "GPL-3.0"
+}
