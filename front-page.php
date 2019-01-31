@@ -97,7 +97,7 @@
                     <?= $firstName ?>
                     <?= $lastName ?></b> is turning
                 <?= $yearsOld ?> this year!</p>
-            <p><i class="fas fa-calendar-day frame yellow-bg"></i> &nbsp; The big date is on
+            <p><i class="fas fa-calendar-day frame yellow-bg"></i> &nbsp; The big date was on
                 <?= $birthdayFormat ?>.</p>
         </div>
     </div>
