@@ -1,7 +1,7 @@
 /* 
 Theme Name: Birthday App
 Author: Marija Shakleva
-Author URI: http://wordpress.org/
+Author URI: https://www.linkedin.com/in/marija-shakleva-808427159/
 Description: The Birthday App is an app that lists the upcoming birthdays of registered users. It uses the default wordpress login and register functionalities. In the profile settings at the bottom, there is a birthday field for each user. Every user can see the upcoming birthdays of all the people that have registered and inserted their birthday.
 *Recommendation for register option: Consider using the WP Mail SMTP plugin or set up your server so it can implement the PHP mail() function accordingly.
 *Recommendation for testing and dummy data: Consider using the FakerPress plugin.
