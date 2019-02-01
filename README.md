@@ -16,14 +16,13 @@ and then for editing the main.scss run</br>
 ``` gulp ```
 
 
-
 ## Recommendations
 * Recommendation for register option: Consider using the [WP Mail SMTP](https://wordpress.org/plugins/wp-mail-smtp/) plugin or set up your server so it can implement the PHP mail() function accordingly.<br>
 * Recommendation for testing and dummy data: Consider using the [FakerPress](https://wordpress.org/plugins/fakerpress/) plugin.
 
 
 ## Activate Theme
-After you've installed wordpress, clone or download the theme in the wp-content/themes/ folder and activate it.
+After you've installed wordpress rename the wordpress folder to birthday-app(if you're not configuring wp_config.php yourself), clone or download the theme in the wp-content/themes/ folder, rename it birthdayapp and activate it.
 
 
 ## Theme Screenshot
